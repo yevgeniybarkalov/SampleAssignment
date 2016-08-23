@@ -1,38 +1,40 @@
-/*
-void setup()
-{
-  size(500,500);
-}
-void draw()
-{
-  fill(255,255,0);
-  ellipse(100,50,80,80);
-  arc(100,50,60,60,PI/8,7*PI/8);
-  fill(0,0,0);
-  ellipse(85,40,10,15);
-  ellipse(115,40,10,15);
-}
-*/
-//
-boolean keepGoing = true;
-int X = 0;
-int Y = 0;
+import java.awt.*;
+
+int X = 40;
+int Y = 60;
+int valueX = 1;
+int valueY = 1;
 int circleSize = 80;
 
 void setup()
 {
 	size (500,500);
-  //setResizable(false);
   draw();
 }
 //
 void draw()
 {
-	fill (0,0,0);
+  background(255);
+  fill (0,0,0);
   ellipse(X,Y,circleSize,circleSize);
-  int value = 1;
 
-  if (!(X > 0))
-  {}
+  if (X < 0)
+    valueX = 1; 
+  else if (X > 500)
+    valueX = (-1);
+
+  if (Y < 0)
+    valueY = 1;
+  else if (Y > 500)
+    valueY = (-1);
+
+  X+=valueX;
+  Y+=valueY;
+  System.out.println("X is " + X);
 }
 
+void mousePressed()
+{
+  X = mouseX;
+  Y = mouseY;
+}
