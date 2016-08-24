@@ -15,7 +15,7 @@ void setup()
 void draw()
 {
   background(255);
-  fill (0,0,0);
+  fill ((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
   ellipse(X,Y,circleSize,circleSize);
 
   if (X < 0)
