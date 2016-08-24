@@ -8,7 +8,7 @@ int circleSize = 80;
 
 void setup()
 {
-	size (500,500);
+  size (500,500);
   draw();
 }
 //
@@ -30,7 +30,6 @@ void draw()
 
   X+=valueX;
   Y+=valueY;
-  System.out.println("X is " + X);
 }
 
 void mousePressed()
