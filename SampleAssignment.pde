@@ -5,6 +5,9 @@ int Y = 60;
 int valueX = 1;
 int valueY = 1;
 int circleSize = 80;
+int colorR = (int)(Math.random()*255);
+int colorG = (int)(Math.random()*255);
+int colorB = (int)(Math.random()*255);
 
 void setup()
 {
@@ -15,11 +18,15 @@ void setup()
 void draw()
 {
   background(255);
-  fill ((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+  //(int)(Math.random()*255)
+  fill (colorR,colorG,colorB);
   ellipse(X,Y,circleSize,circleSize);
 
   if (X < 0)
+  {
     valueX = 1; 
+    
+  }
   else if (X > 500)
     valueX = (-1);
 
